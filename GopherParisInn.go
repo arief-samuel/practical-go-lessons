@@ -15,6 +15,27 @@ func main() {
 	roomsOccupied := rand.Intn(rooms)
 	roomsAvailable := rooms - roomsOccupied
 
+	// feractor to function
+	// func computeOccupancyLevel(rate float32) string {
+	// 	switch rate {
+	// 	case > 70:
+	// 		level = "High"
+	// 	case > 20:
+	// 		level = "Medium"
+	// 	default:
+	// 		occupancyLevel = "Low"
+	// 	}
+	// 	return
+	// }
+	func computeOccupancyLevel(rate float32) string {
+		if occupancyRate > 70 {
+			return = "High"
+		} else if occupancyRate > 20 {
+			return = "Medium"
+		} else {
+			return = "Low"
+		}
+	}
 	occupancyRate := (float32(roomsOccupied) / float32(rooms)) * 100
 	var occupancyLevel string
 	if occupancyRate > 70 {
@@ -55,7 +76,7 @@ func main() {
 			roomNumber := firstRoomNumber + i
 			size := rand.Intn(6) + 1
 			nights := rand.Intn(10) + 1
-			fmt.Println(roomNumber, ":", size, "people /", nights, " nights ")
+			fmt.Println(-roomNumber, ":", size, "people /", nights, " nights ")
 		}
 	} else {
 		fmt.Println("No rooms availbale for tonight")
